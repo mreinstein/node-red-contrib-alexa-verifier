@@ -1,0 +1,31 @@
+{
+  "name": "node-red-contrib-alexa-verifier",
+  "version": "0.0.1",
+  "description": "node-red packaged node that verifies HTTP requests sent to an Alexa skill are sent from Amazon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreinstein/node-red-contrib-alexa-verifier.git"
+  },
+  "keywords": [
+    "node-red",
+    "alexa"
+  ],
+  "author": "Mike Reinstein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mreinstein/node-red-contrib-alexa-verifier/issues"
+  },
+  "homepage": "https://github.com/mreinstein/node-red-contrib-alexa-verifier#readme",
+  "dependencies": {
+    "alexa-verifier": "0.0.4"
+  },
+  "node-red"     : {
+      "nodes": {
+          "alexa-verifier": "alexa-verifier/alexa-verifier.js"
+      }
+  }
+}

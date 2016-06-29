@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    RED.nodes.registerType('alexa-verifier',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: 'function.png',
+        label: function() {
+            return this.name||'alexa-verifier';
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="alexa-verifier">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="alexa-verifier">
+    <p>A simple node that validates the http request originated from Amazon Alexa's servers.</p>
+    <p>Based on the <a href="https://www.npmjs.com/package/alexa-verifier">alexa-verifier node module.</a></p>
+</script>
