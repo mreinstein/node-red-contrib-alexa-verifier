@@ -11,10 +11,10 @@ module.exports = function(RED) {
       var requestBody = msg.req.body;
       verifier(cert_url, signature, requestRawBody, function(er) {
         if (er) {
-          this.error('error validating the alexa cert:', er);
+          node.error('error validating the alexa cert:', er);
           msg.res.status(401).json({ status: 'failure', reason: er });
         } else {
-          this.log('successfully validated alexa');
+          node.log('successfully validated alexa');
           node.send(msg);
         }
       });
