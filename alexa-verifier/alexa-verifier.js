@@ -12,6 +12,9 @@ module.exports = function(RED) {
       if (typeof body === 'object') {
         try {
           body = JSON.stringify(body);
+        } catch (er) {
+          node.error('failed to parse alexa request body:' + er);
+          return;
         }
       }
       verifier(cert_url, signature, body, function(er) {
