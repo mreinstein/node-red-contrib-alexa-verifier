@@ -19,5 +19,5 @@ module.exports = function(RED) {
       });
     });
   }
-  RED.nodes.registerType("alexa-verifier", alexaVerifierNode);
+  RED.nodes.registerType('alexa-verifier', alexaVerifierNode);
 };
