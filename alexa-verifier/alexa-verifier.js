@@ -8,7 +8,13 @@ module.exports = function(RED) {
     this.on('input', function(msg) {
       var cert_url  = msg.req.headers.signaturecertchainurl;
       var signature = msg.req.headers.signature;
-      verifier(cert_url, signature, msg.req.body, function(er) {
+      var body = msg.req.body;
+      if (typeof body === 'object') {
+        try {
+          body = JSON.stringify(body);
+        }
+      }
+      verifier(cert_url, signature, body, function(er) {
         if (er) {
           node.error('error validating the alexa cert:' + er);
           msg.res.status(401).json({ status: 'failure', reason: er });
