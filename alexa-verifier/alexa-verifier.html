@@ -1,17 +1,17 @@
 <script type="text/javascript">
-    RED.nodes.registerType('alexa-verifier',{
-        category: 'function',
-        color: '#a6bbcf',
-        defaults: {
-            name: {value: '' }
-        },
-        inputs:1,
-        outputs:1,
-        icon: 'function.png',
-        label: function() {
-            return this.name||'alexa-verifier';
-        }
-    });
+  RED.nodes.registerType('alexa-verifier', {
+    category: 'function',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: '' }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: 'function.png',
+    label: function() {
+      return this.name || 'alexa-verifier'
+    }
+  })
 </script>
 
 <script type="text/x-red" data-template-name="alexa-verifier">
