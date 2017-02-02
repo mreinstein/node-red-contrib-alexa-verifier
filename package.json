@@ -2,9 +2,9 @@
   "name": "node-red-contrib-alexa-verifier",
   "version": "0.0.8",
   "description": "node-red packaged node that verifies HTTP requests sent to an Alexa skill are sent from Amazon",
-  "main": "index.js",
+  "main": "alexa-verifier/alexa-verifier.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap ./test"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "nodes": {
       "alexa-verifier": "alexa-verifier/alexa-verifier.js"
     }
+  },
+  "devDependencies": {
+    "proxyquire": "^1.7.11",
+    "tap": "^10.0.1"
   }
 }
