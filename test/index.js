@@ -1,8 +1,8 @@
 'use strict'
 
 const proxyquire = require('proxyquire')
-const verifier = require('../alexa-verifier/alexa-verifier.js')
-const test     = require('tap').test
+const verifier   = require('../alexa-verifier/alexa-verifier.js')
+const test       = require('tap').test
 
 function RED () {
   const types = { } // ghetto type registry
