@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/mreinstein/node-red-contrib-alexa-verifier#readme",
   "dependencies": {
-    "alexa-verifier": "^0.4.0"
+    "alexa-verifier": "^0.5.0"
   },
   "node-red": {
     "nodes": {
