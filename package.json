@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/mreinstein/node-red-contrib-alexa-verifier#readme",
   "dependencies": {
-    "alexa-verifier": "^0.5.0"
+    "alexa-verifier": "^1.0.0"
   },
   "node-red": {
     "nodes": {
@@ -31,5 +31,8 @@
   "devDependencies": {
     "proxyquire": "^1.7.11",
     "tap": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=4"
   }
 }

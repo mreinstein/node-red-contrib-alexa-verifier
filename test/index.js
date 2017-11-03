@@ -4,12 +4,13 @@ const proxyquire = require('proxyquire')
 const verifier   = require('../alexa-verifier/alexa-verifier.js')
 const test       = require('tap').test
 
+
 function RED () {
   const types = { } // ghetto type registry
   return {
     nodes: {
       createNode: function(currentNode, config) {
-  
+
       },
 
       registerType: function (typeName, node) {
@@ -55,7 +56,7 @@ test('registers node-red input event', function(t) {
 
   // install the node
   r.types['alexa-verifier'].call(context)
-  
+
   t.equal(eventCount, 1)
   t.equal(inputEventCount, 1)
   t.equal(typeof inputCallback, 'function')
@@ -103,7 +104,7 @@ test('handles invalid JSON body', function(t) {
   inputCallback(msg)
 
   t.equal(errorMessage, 'failed to parse alexa request body:TypeError: Converting circular structure to JSON')
-  
+
   t.end()
 })
 

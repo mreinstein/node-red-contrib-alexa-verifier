@@ -1,5 +1,7 @@
 .DS_Store
 .eslintrc
 *.log
-node_modules/
+node_modules
+
+# Don't checkin package-lock.json for libraries
 package-lock.json
