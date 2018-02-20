@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "proxyquire": "^1.7.11",
-    "tap": "^10.0.1"
+    "tap": "^11.0.0"
   },
   "engines": {
     "node": ">=4"
