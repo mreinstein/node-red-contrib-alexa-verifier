@@ -3,5 +3,7 @@
 *.log
 node_modules
 
+.nyc_output
+
 # Don't checkin package-lock.json for libraries
 package-lock.json
