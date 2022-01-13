@@ -103,7 +103,8 @@ test('handles invalid JSON body', function(t) {
   }
   inputCallback(msg)
 
-  t.equal(errorMessage, 'failed to parse alexa request body:TypeError: Converting circular structure to JSON')
+  const startsWith = 'failed to parse alexa request body:TypeError: Converting circular structure to JSON'
+  t.equal(errorMessage.substring(0, startsWith.length), 'failed to parse alexa request body:TypeError: Converting circular structure to JSON')
 
   t.end()
 })
